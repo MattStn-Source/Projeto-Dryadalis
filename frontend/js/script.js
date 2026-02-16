@@ -104,7 +104,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
     chat.style.display = "flex"
 
-    websocket = new WebSocket("https://projeto-dryadalis.onrender.com")
+    websocket = new WebSocket("wss://projeto-dryadalis.onrender.com")
     websocket.onmessage = processMessage
 }
 
@@ -126,3 +126,4 @@ const sendMessage = (event) => {
 loginForm.addEventListener("submit", handleLogin)
 
 chatForm.addEventListener("submit", sendMessage)
+
